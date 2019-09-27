@@ -1,0 +1,48 @@
+<app-nav></app-nav>
+<section>
+  <router-outlet></router-outlet>
+</section>
+
+<div>
+  <table>
+      <thead>
+        <tr >
+          <th>S.no</th>
+          <th>Actor</th>
+          <th>Character</th>
+          <th>Gender</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr *ngFor=" let c of characters; let i = index; let even = even; let odd = odd"
+            [ngClass] = " { even:true, odd:true} ">
+          <td> {{i + 1}} </td>
+          <td> {{c.actor_name}} </td>
+          <td> {{c.character_name}} </td>
+          <td> {{c.gender}} </td>
+          <td> {{c.status}} </td>
+        </tr>
+      </tbody>
+</table>
+
+<hr>
+
+<input type="text" #user_input (keyup) = "0"/>
+<button (click) ="addItem(user_input.value)">Add Item</button>
+<!-- 
+<div *ngIf = "show">
+<p>LOCAL STORAGE</p>
+<ul>
+    <li *ngFor = " let item of local_Arr"> {{item}} </li> 
+</ul>
+</div>
+<hr> -->
+
+<ul>
+  <li *ngFor = " let item of names.split(',') | filter : 'Kr'"> {{item}} </li>
+</ul>
+
+</div>
+
