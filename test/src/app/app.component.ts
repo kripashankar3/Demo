@@ -29,12 +29,6 @@ export class AppComponent {
       character_name: 'Thor',
       gender: 'Male',
       status: 'Alive'
-    },
-    {
-      actor_name: 'Unkown',
-      character_name: 'Thanos',
-      gender: 'Male',
-      status: 'Dead'
     }
   ];
 
